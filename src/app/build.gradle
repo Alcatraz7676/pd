@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion versions.compileSdk
+    defaultConfig {
+        testApplicationId "ru.mospolytech.app-test"
+        applicationId "ru.mospolytech.app"
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode 1
+        versionName "1.0"
+        resConfigs "en", "ru"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+}
+
+dependencies {
+    implementation libraries.kotlinStd
+    implementation libraries.appcompat
+    implementation libraries.design
+    implementation libraries.constraintLayout
+
+    implementation libraries.dagger
+    kapt libraries.daggerCompiler
+
+    implementation libraries.moxy
+    implementation libraries.moxyAndroid
+    implementation libraries.moxyAndroidX
+    implementation libraries.moxyKtx
+    kapt libraries.moxyCompiler
+
+    implementation libraries.cicerone
+    implementation libraries.timber
+
+    implementation libraries.rxJava
+    implementation libraries.rxAndroid
+}

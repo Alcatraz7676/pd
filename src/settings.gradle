@@ -1,0 +1,3 @@
+rootProject.name='MospolytechApp'
+include ':app'
+include ':buildSrc'

@@ -1,0 +1,52 @@
+ext.versions = [
+        compileSdk              : 28,
+        targetSdk               : 28,
+        minSdk                  : 21,
+
+        kotlin                  : '1.3.72',
+        support                 : '1.1.0',
+        material                : '1.1.0-beta01',
+        constraintLayout        : '2.0.0-alpha3',
+
+        dagger                  : '2.22.1',
+        moxy                    : '2.1.2',
+
+        cicerone                : '2.0.0',
+        timber                  : '4.5.1',
+
+        rxJava                  : '2.2.9',
+        rxAndroid               : '2.1.1',
+        rxPermissions           : '0.9.4',
+        rxBinding               : '2.2.0',
+        rxRelay                 : '2.0.0',
+        rxPreferences           : '2.0.0-RC3',
+        rxLint                  : '1.7.0'
+]
+
+ext {
+    libraries = [
+        kotlinStd                   : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin",
+        appcompat                   : "androidx.appcompat:appcompat:$versions.support",
+        design                      : "com.google.android.material:material:$versions.material",
+        constraintLayout            : "androidx.constraintlayout:constraintlayout:$versions.constraintLayout",
+
+        moxyCompiler                : "com.github.moxy-community:moxy-compiler:$versions.moxy",
+        moxy                        : "com.github.moxy-community:moxy:$versions.moxy",
+        moxyAndroid                 : "com.github.moxy-community:moxy-android:$versions.moxy",
+        moxyAndroidX                : "com.github.moxy-community:moxy-androidx:$versions.moxy",
+        moxyCompat                  : "com.github.moxy-community:moxy-app-compat:$versions.moxy",
+        moxyKtx                     : "com.github.moxy-community:moxy-ktx:$versions.moxy",
+
+        cicerone                    : "ru.terrakok.cicerone:cicerone:$versions.cicerone",
+        timber                      : "com.jakewharton.timber:timber:$versions.timber",
+
+        daggerCompiler              : "com.google.dagger:dagger-compiler:$versions.dagger",
+        dagger                      : "com.google.dagger:dagger:$versions.dagger",
+
+        rxJava                      : "io.reactivex.rxjava2:rxjava:$versions.rxJava",
+        rxAndroid                   : "io.reactivex.rxjava2:rxandroid:$versions.rxAndroid",
+        rxBinding                   : "com.jakewharton.rxbinding2:rxbinding-kotlin:$versions.rxBinding",
+        rxBindingCompat             : "com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:$versions.rxBinding",
+        rxBindingDesign             : "com.jakewharton.rxbinding2:rxbinding-design-kotlin:$versions.rxBinding"
+    ]
+}
