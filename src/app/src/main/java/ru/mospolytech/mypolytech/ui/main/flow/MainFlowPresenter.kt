@@ -12,6 +12,6 @@ class MainFlowPresenter @Inject constructor(
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
-        localRouter.replaceScreen(Screens.EXAMPLE_FRAGMENT)
+        localRouter.replaceScreen(Screens.TABS_FRAGMENT)
     }
 }

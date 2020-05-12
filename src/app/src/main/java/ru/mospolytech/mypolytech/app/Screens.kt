@@ -7,5 +7,5 @@ object Screens {
 
     const val MAIN_FRAGMENT_FLOW = "MAIN_FRAGMENT_FLOW"
 
-    const val EXAMPLE_FRAGMENT = "EXAMPLE_FRAGMENT"
+    const val TABS_FRAGMENT = "EXAMPLE_FRAGMENT"
 }

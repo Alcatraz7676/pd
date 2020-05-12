@@ -7,10 +7,9 @@ import moxy.ktx.moxyPresenter
 import ru.mospolytech.mypolytech.R
 import ru.mospolytech.mypolytech.app.Screens
 import ru.mospolytech.mypolytech.di.app.AppComponent
-import ru.mospolytech.mypolytech.di.main.MainActivityComponent
 import ru.mospolytech.mypolytech.di.main.flow.MainFlowComponent
 import ru.mospolytech.mypolytech.ui.base.HostFragment
-import ru.mospolytech.mypolytech.ui.example.ExampleFragment
+import ru.mospolytech.mypolytech.ui.tabs.TabsFragment
 import ru.mospolytech.mypolytech.utils.common_registry.ComponentRegistry
 import ru.mospolytech.mypolytech.utils.navigation.cicerone.LocalNavigation
 import ru.mospolytech.mypolytech.utils.navigation.cicerone.SupportAppNavigator
@@ -71,7 +70,7 @@ class MainFlowFragment : HostFragment(), MainFlowView {
 
             override fun createFragment(screenKey: String?, data: Any?): Fragment? {
                 return when (screenKey) {
-                    Screens.EXAMPLE_FRAGMENT -> ExampleFragment()
+                    Screens.TABS_FRAGMENT -> TabsFragment()
                     else -> null
                 }
             }
